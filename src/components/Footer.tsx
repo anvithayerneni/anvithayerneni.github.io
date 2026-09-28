@@ -16,14 +16,9 @@ export function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-sky-400 flex items-center justify-center text-white font-black text-base shadow-sm">
                 AY
               </div>
-              <div>
-                <span className="font-extrabold text-lg text-slate-900 dark:text-white">
-                  Anvitha Yerneni
-                </span>
-                <p className="text-xs font-mono text-indigo-600 dark:text-indigo-400">
-                  Software Engineer | AI Engineer
-                </p>
-              </div>
+              <span className="font-extrabold text-lg text-slate-900 dark:text-white">
+                Anvitha Yerneni
+              </span>
             </div>
 
             <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">

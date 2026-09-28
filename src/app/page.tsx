@@ -1,5 +1,4 @@
 import React from "react";
-import { Hero } from "@/components/Hero";
 import { AboutSection } from "@/components/AboutSection";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
@@ -11,8 +10,7 @@ import { ContactSection } from "@/components/ContactSection";
 export default function Home() {
   return (
     <main className="min-h-screen bg-grid-pattern">
-      <Hero />
-      <AboutSection />
+      <AboutSection isTopSection={true} />
       <ExperienceTimeline />
       <FeaturedProjects />
       <ArchitectureVisualizationSection />

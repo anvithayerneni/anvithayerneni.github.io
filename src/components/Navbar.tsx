@@ -16,10 +16,9 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState<string>("about");
 
   const navItems = [
-    { href: "#home", route: "/", label: "Home" },
     { href: "#about", route: "/about", label: "About" },
     { href: "#experience", route: "/experience", label: "Experience" },
     { href: "#projects", route: "/work", label: "Projects" },
@@ -35,7 +34,7 @@ export function Navbar() {
 
       // Scroll spy for active section on home page
       if (pathname === "/") {
-        const sections = ["home", "about", "experience", "projects", "skills", "resume", "contact"];
+        const sections = ["about", "experience", "projects", "skills", "resume", "contact"];
         const scrollPosition = window.scrollY + 200;
 
         for (const section of sections) {
@@ -87,22 +86,16 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Personal Brand */}
           <Link 
-            href="/" 
+            href="/#about" 
             className="flex items-center gap-3 group focus:outline-none"
             aria-label="Anvitha Yerneni Homepage"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-sky-400 flex items-center justify-center text-white font-black text-base shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform duration-200">
               AY
             </div>
-            <div className="flex flex-col">
-              <span className="font-extrabold text-base md:text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                Anvitha Yerneni
-              </span>
-              <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 -mt-0.5 flex items-center gap-1.5 font-mono">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                Software & AI Engineer
-              </span>
-            </div>
+            <span className="font-extrabold text-base md:text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Anvitha Yerneni
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
