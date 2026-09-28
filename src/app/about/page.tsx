@@ -40,69 +40,69 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header */}
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-950/60 border border-indigo-800/80 text-indigo-400 text-xs font-bold uppercase tracking-wider font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/80 text-indigo-700 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider font-mono">
             <User className="w-3.5 h-3.5" />
             <span>Background & Architecture Philosophy</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             About Anvitha Yerneni
           </h1>
 
-          <p className="text-base sm:text-lg text-indigo-400 font-mono font-semibold">
+          <p className="text-base sm:text-lg text-indigo-600 dark:text-indigo-400 font-mono font-semibold">
             Software Engineer | AI Engineer | Full Stack Engineer | Data Engineer
           </p>
         </div>
 
         {/* Core Narrative */}
-        <div className="space-y-6 text-sm sm:text-base text-slate-300 leading-relaxed">
+        <div className="space-y-6 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
           <p>
             I am a software engineer focused on designing scalable backend architectures, high-throughput event-driven data platforms, and grounded generative AI applications.
           </p>
           <p>
-            I hold a Master of Science in Computer Science from <strong className="text-white">Clemson University (December 2024)</strong> and a Bachelor of Technology in Computer Science from <strong className="text-white">Amrita Vishwa Vidyapeetham</strong>. My engineering experience spans real-world enterprise systems at <strong className="text-white">Susser Bank</strong> (Dallas, TX) and <strong className="text-white">Toshiba Software</strong> (Bangalore, India).
+            I hold a Master of Science in Computer Science from <strong className="text-slate-900 dark:text-white">Clemson University (December 2024)</strong> and a Bachelor of Technology in Computer Science from <strong className="text-slate-900 dark:text-white">Amrita Vishwa Vidyapeetham</strong>. My engineering experience spans real-world enterprise systems at <strong className="text-slate-900 dark:text-white">Susser Bank</strong> and <strong className="text-slate-900 dark:text-white">Toshiba Software</strong>.
           </p>
           <p>
             My engineering work is rooted in practical systems problem-solving:
           </p>
-          <ul className="space-y-3 pl-2 text-xs sm:text-sm font-mono">
+          <ul className="space-y-3 pl-2 text-xs sm:text-sm font-mono text-slate-700 dark:text-slate-300">
             <li className="flex items-start gap-3">
-              <span className="text-indigo-400 font-bold">•</span>
-              <span><strong className="text-white">AI E-Commerce Assistant:</strong> LangGraph state graph + Azure AI Search with 118 automated tests and 100% deterministic catalog grounding.</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-bold">•</span>
+              <span><strong className="text-slate-900 dark:text-white">AI E-Commerce Assistant:</strong> LangGraph state graph + Azure AI Search with 118 automated tests and 100% deterministic catalog grounding.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-indigo-400 font-bold">•</span>
-              <span><strong className="text-white">CareFlow:</strong> Clinical scheduling platform built with Java 21, Spring Boot 3, and PostgreSQL GiST exclusion locks guaranteeing zero doctor double-booking.</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-bold">•</span>
+              <span><strong className="text-slate-900 dark:text-white">CareFlow:</strong> Clinical scheduling platform built with Java 21, Spring Boot 3, and PostgreSQL GiST exclusion locks guaranteeing zero doctor double-booking.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-indigo-400 font-bold">•</span>
-              <span><strong className="text-white">AeroSight:</strong> Lakehouse data engineering platform processing BTS flight data with PySpark medallion pipelines, DuckDB OLAP star schema, and delay ML models.</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-bold">•</span>
+              <span><strong className="text-slate-900 dark:text-white">AeroSight:</strong> Lakehouse data engineering platform processing BTS flight data with PySpark medallion pipelines, DuckDB OLAP star schema, and delay ML models.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-indigo-400 font-bold">•</span>
-              <span><strong className="text-white">LogiFlow:</strong> Distributed logistics platform synchronizing 4 distinct user roles with Kafka event streams, Redis pub/sub, and sub-100ms WebSockets.</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-bold">•</span>
+              <span><strong className="text-slate-900 dark:text-white">LogiFlow:</strong> Distributed logistics platform synchronizing 4 distinct user roles with Kafka event streams, Redis pub/sub, and sub-100ms WebSockets.</span>
             </li>
           </ul>
         </div>
 
         {/* Engineering Principles */}
-        <div className="space-y-6 pt-6 border-t border-slate-800">
-          <h2 className="text-2xl font-bold text-white">
+        <div className="space-y-6 pt-6 border-t border-slate-200 dark:border-slate-800">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
             Core Engineering Principles
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {principles.map((principle, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#090e1a]/95 border border-slate-800 shadow-sm space-y-2.5"
+                className="p-6 rounded-2xl bg-white dark:bg-[#090e1a]/95 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2.5"
               >
-                <div className="flex items-center gap-2 text-indigo-400">
+                <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400">
                   <CheckCircle2 className="w-4 h-4" />
-                  <h3 className="font-bold text-white text-sm sm:text-base">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
                     {principle.title}
                   </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-6">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed pl-6">
                   {principle.description}
                 </p>
               </div>
@@ -111,11 +111,11 @@ export default function AboutPage() {
         </div>
 
         {/* Bottom Connect Box */}
-        <div className="p-8 rounded-2xl bg-[#090e1a] text-white border border-slate-800 space-y-4 shadow-xl">
-          <h3 className="text-xl font-bold text-white">
+        <div className="p-8 rounded-2xl bg-white dark:bg-[#090e1a] text-slate-800 dark:text-white border border-slate-200 dark:border-slate-800 space-y-4 shadow-xl">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">
             Let&apos;s build something meaningful.
           </h3>
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
             I am open to discussions regarding Software Engineering, AI & GenAI Systems, Distributed Backends, and Data Platform Engineering.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
@@ -130,7 +130,7 @@ export default function AboutPage() {
               href="https://github.com/anvithayerneni"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 text-xs sm:text-sm font-semibold hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
               <span>GitHub Profile</span>
@@ -139,9 +139,9 @@ export default function AboutPage() {
               href="https://www.linkedin.com/in/yernenianvitha22/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 text-xs sm:text-sm font-semibold hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
-              <LinkedinIcon className="w-4 h-4 text-sky-400" />
+              <LinkedinIcon className="w-4 h-4 text-sky-500 dark:text-sky-400" />
               <span>LinkedIn</span>
             </a>
           </div>

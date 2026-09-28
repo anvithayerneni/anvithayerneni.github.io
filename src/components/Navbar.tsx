@@ -9,13 +9,6 @@ import {
   Menu, 
   X, 
   FileText, 
-  Sparkles, 
-  Layers, 
-  Cpu, 
-  Briefcase, 
-  User, 
-  Mail,
-  Award,
   ChevronRight
 } from "lucide-react";
 
@@ -31,7 +24,6 @@ export function Navbar() {
     { href: "#experience", route: "/experience", label: "Experience" },
     { href: "#projects", route: "/work", label: "Projects" },
     { href: "#skills", route: "/capabilities", label: "Skills" },
-    { href: "#certifications", route: "/#certifications", label: "Certifications" },
     { href: "#resume", route: "/resume", label: "Resume" },
     { href: "#contact", route: "/contact", label: "Contact" },
   ];
@@ -43,7 +35,7 @@ export function Navbar() {
 
       // Scroll spy for active section on home page
       if (pathname === "/") {
-        const sections = ["home", "about", "experience", "projects", "skills", "certifications", "resume", "contact"];
+        const sections = ["home", "about", "experience", "projects", "skills", "resume", "contact"];
         const scrollPosition = window.scrollY + 200;
 
         for (const section of sections) {
@@ -87,7 +79,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#070a12]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/20"
+          ? "bg-white/90 dark:bg-[#070a12]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-lg dark:shadow-black/20"
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -103,11 +95,11 @@ export function Navbar() {
               AY
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-base md:text-lg tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+              <span className="font-extrabold text-base md:text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 Anvitha Yerneni
               </span>
-              <span className="text-[11px] font-medium text-slate-400 -mt-0.5 flex items-center gap-1.5 font-mono">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 -mt-0.5 flex items-center gap-1.5 font-mono">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 Software & AI Engineer
               </span>
             </div>
@@ -129,8 +121,8 @@ export function Navbar() {
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
                     isActive
-                      ? "text-indigo-400 bg-indigo-950/60 border border-indigo-800/80 shadow-xs"
-                      : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                      ? "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/80 shadow-xs"
+                      : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60"
                   }`}
                 >
                   {item.label}
@@ -145,7 +137,7 @@ export function Navbar() {
               href="https://github.com/anvithayerneni"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               aria-label="GitHub Profile"
               title="GitHub Profile"
             >
@@ -169,7 +161,7 @@ export function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg border border-slate-800 text-slate-200 hover:bg-slate-800 focus:outline-none"
+              className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -180,7 +172,7 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isOpen && (
-        <div className="xl:hidden border-b border-slate-800 bg-[#090d16]/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-fade-in">
+        <div className="xl:hidden border-b border-slate-200 dark:border-slate-800 bg-white/98 dark:bg-[#090d16]/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-fade-in">
           <div className="grid gap-1">
             {navItems.map((item) => {
               const targetSection = item.href.replace("#", "");
@@ -196,23 +188,23 @@ export function Navbar() {
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`flex items-center justify-between p-3 rounded-xl text-sm font-semibold transition-colors ${
                     isActive
-                      ? "text-indigo-400 bg-indigo-950/60 border border-indigo-900/60"
-                      : "text-slate-200 hover:bg-slate-800/60"
+                      ? "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-900/60"
+                      : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60"
                   }`}
                 >
                   <span>{item.label}</span>
-                  <ChevronRight className="w-4 h-4 text-slate-500" />
+                  <ChevronRight className="w-4 h-4 text-slate-400 dark:text-slate-500" />
                 </a>
               );
             })}
           </div>
 
-          <div className="pt-4 border-t border-slate-800 grid grid-cols-2 gap-3">
+          <div className="pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-3">
             <a
               href="https://github.com/anvithayerneni"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-800 text-xs font-bold text-slate-200 hover:bg-slate-800 uppercase tracking-wider"
+              className="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 uppercase tracking-wider"
             >
               <GithubIcon className="w-4 h-4" />
               <span>GitHub</span>

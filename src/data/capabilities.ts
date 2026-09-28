@@ -150,49 +150,4 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   }
 ];
 
-export interface Certification {
-  id: string;
-  title: string;
-  issuer: string;
-  code?: string;
-  year: string;
-  badgeUrl?: string;
-  description: string;
-  skills: string[];
-  credentialStatus: "Active" | "Certified";
-}
 
-export const CERTIFICATIONS: Certification[] = [
-  {
-    id: "oci-genai-2025",
-    title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
-    issuer: "Oracle",
-    code: "1Z0-1127-24",
-    year: "2025",
-    description: "Comprehensive professional credential validating architecture and implementation expertise across Large Language Models (LLMs), RAG pipelines, fine-tuning methodologies, vector databases, and OCI Generative AI services.",
-    skills: [
-      "Generative AI Architecture",
-      "LLM Fine-Tuning & Prompting",
-      "RAG & Vector Retrieval",
-      "OCI GenAI Service",
-      "Agentic AI Frameworks"
-    ],
-    credentialStatus: "Certified"
-  },
-  {
-    id: "aws-csa-associate",
-    title: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services (AWS)",
-    code: "SAA-C03",
-    year: "Certified",
-    description: "Industry-standard certification validating end-to-end cloud architecture expertise: designing highly available, cost-optimized, fault-tolerant, and secure distributed cloud systems on AWS.",
-    skills: [
-      "High-Availability Cloud Architecture",
-      "VPC & Network Security",
-      "IAM & Access Controls",
-      "AWS S3, RDS, DynamoDB, Lambda",
-      "Scalability & Cost Optimization"
-    ],
-    credentialStatus: "Certified"
-  }
-];

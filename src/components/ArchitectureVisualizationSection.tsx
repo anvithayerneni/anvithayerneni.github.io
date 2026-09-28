@@ -225,19 +225,19 @@ export function ArchitectureVisualizationSection() {
   const current = architectures.find((a) => a.id === selectedArch) || architectures[0];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#080c16]/80 border-t border-slate-800/80 relative">
+    <section className="py-20 lg:py-28 bg-slate-100/60 dark:bg-[#080c16]/80 border-t border-slate-200 dark:border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-950/60 border border-indigo-800/80 text-indigo-400 text-xs font-bold uppercase tracking-wider font-mono mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/80 text-indigo-700 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider font-mono mb-2">
               <Workflow className="w-3.5 h-3.5" />
               <span>System Architecture & Data Flows</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Interactive System Topologies
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
               Step-by-step data flows, concurrency guarantees, and architectural invariants implemented across featured systems.
             </p>
           </div>
@@ -253,19 +253,19 @@ export function ArchitectureVisualizationSection() {
                 onClick={() => setSelectedArch(arch.id)}
                 className={`p-4 rounded-2xl text-left border transition-all duration-200 space-y-2 ${
                   isSelected
-                    ? "bg-indigo-950/80 border-indigo-500 shadow-lg shadow-indigo-500/20 ring-1 ring-indigo-500"
-                    : "bg-[#090e1a]/90 border-slate-800 hover:border-slate-700 hover:bg-slate-900"
+                    ? "bg-indigo-50 dark:bg-indigo-950/80 border-indigo-500 shadow-md shadow-indigo-500/15 ring-1 ring-indigo-500"
+                    : "bg-white dark:bg-[#090e1a]/90 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900"
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-indigo-400">
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-indigo-600 dark:text-indigo-400">
                     {arch.domain}
                   </span>
                   {isSelected && (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
                   )}
                 </div>
-                <h4 className="text-xs sm:text-sm font-bold text-white line-clamp-1">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white line-clamp-1">
                   {arch.title.split(":")[0]}
                 </h4>
               </button>
@@ -274,26 +274,26 @@ export function ArchitectureVisualizationSection() {
         </div>
 
         {/* Active Architecture Viewer Box */}
-        <div className="p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#090e1a] border border-slate-800 shadow-2xl space-y-8">
+        <div className="p-6 sm:p-8 lg:p-10 rounded-2xl bg-white dark:bg-[#090e1a] border border-slate-200 dark:border-slate-800 shadow-xl dark:shadow-2xl space-y-8">
           {/* Header */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-5">
             <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-400">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
                 {current.domain} Topography
               </span>
-              <h3 className="text-xl sm:text-2xl font-black text-white mt-0.5">
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-0.5">
                 {current.title}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-400 font-mono mt-1">
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono mt-1">
                 {current.tagline}
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2 text-xs font-mono">
-              <span className="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">
+              <span className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
                 {current.steps.length} Pipeline Stages
               </span>
-              <span className="px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">
+              <span className="px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-400 font-semibold">
                 Deterministic
               </span>
             </div>
@@ -304,26 +304,26 @@ export function ArchitectureVisualizationSection() {
             {current.steps.map((step, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2 relative overflow-hidden group hover:border-indigo-500/50 transition-colors"
+                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 space-y-2 relative overflow-hidden group hover:border-indigo-400 dark:hover:border-indigo-500/50 transition-colors"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-950 text-indigo-400 border border-slate-800">
+                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-white dark:bg-slate-950 text-indigo-700 dark:text-indigo-400 border border-slate-200 dark:border-slate-800">
                     Stage 0{idx + 1}
                   </span>
-                  <span className="text-[11px] font-mono text-slate-400">
+                  <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
                     {step.tech}
                   </span>
                 </div>
 
-                <h4 className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors">
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">
                   {step.name}
                 </h4>
 
-                <p className="text-xs text-indigo-300 font-medium">
+                <p className="text-xs text-indigo-700 dark:text-indigo-300 font-medium">
                   {step.role}
                 </p>
 
-                <p className="text-xs text-slate-400 leading-relaxed pt-1 border-t border-slate-800/60">
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1 border-t border-slate-200/60 dark:border-slate-800/60">
                   {step.detail}
                 </p>
               </div>
@@ -331,23 +331,23 @@ export function ArchitectureVisualizationSection() {
           </div>
 
           {/* Architectural Design Highlight & Invariant */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-            <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono flex items-center gap-1.5">
-                <Activity className="w-3.5 h-3.5 text-indigo-400" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/80 space-y-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-400 font-mono flex items-center gap-1.5">
+                <Activity className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
                 <span>Key Architectural Decision</span>
               </span>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed pt-1">
                 {current.designHighlight}
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/80 space-y-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 font-mono flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                 <span>Enforced System Invariant</span>
               </span>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed pt-1">
                 {current.invariant}
               </p>
             </div>

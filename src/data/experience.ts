@@ -2,7 +2,6 @@ export interface WorkExperience {
   id: string;
   role: string;
   company: string;
-  location: string;
   period: string;
   type: "Professional Experience" | "Education";
   domain: string;
@@ -16,7 +15,6 @@ export const EXPERIENCES: WorkExperience[] = [
     id: "susser-bank",
     role: "Software Engineer",
     company: "Susser Bank",
-    location: "Dallas, TX",
     period: "May 2024 – Present",
     type: "Professional Experience",
     domain: "Financial Services & Banking Systems",
@@ -46,7 +44,6 @@ export const EXPERIENCES: WorkExperience[] = [
     id: "toshiba-software",
     role: "Software Engineer",
     company: "Toshiba Software Pvt. Ltd.",
-    location: "Bangalore, India",
     period: "January 2022 – December 2022",
     type: "Professional Experience",
     domain: "Enterprise Backend Systems & Distributed Infrastructure",
@@ -77,7 +74,6 @@ export const EXPERIENCES: WorkExperience[] = [
 export interface EducationItem {
   degree: string;
   institution: string;
-  location: string;
   graduationDate: string;
   details: string[];
   focusAreas: string[];
@@ -87,7 +83,6 @@ export const EDUCATION: EducationItem[] = [
   {
     degree: "Master of Science in Computer Science (M.S. CS)",
     institution: "Clemson University",
-    location: "Clemson, SC, USA",
     graduationDate: "December 2024",
     details: [
       "Focused on Distributed Systems, Artificial Intelligence, Machine Learning, Database Systems, and Advanced Software Engineering.",
@@ -98,7 +93,6 @@ export const EDUCATION: EducationItem[] = [
   {
     degree: "Bachelor of Technology in Computer Science (B.Tech CS)",
     institution: "Amrita Vishwa Vidyapeetham",
-    location: "India",
     graduationDate: "Completed",
     details: [
       "Rigorous core curriculum in Data Structures & Algorithms, Operating Systems, Database Management Systems, Object-Oriented Design, and Computer Networks.",

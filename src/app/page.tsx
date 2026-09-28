@@ -5,7 +5,6 @@ import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { ArchitectureVisualizationSection } from "@/components/ArchitectureVisualizationSection";
 import { SkillsSection } from "@/components/SkillsSection";
-import { CertificationsSection } from "@/components/CertificationsSection";
 import { ResumeSection } from "@/components/ResumeSection";
 import { ContactSection } from "@/components/ContactSection";
 
@@ -18,7 +17,6 @@ export default function Home() {
       <FeaturedProjects />
       <ArchitectureVisualizationSection />
       <SkillsSection />
-      <CertificationsSection />
       <ResumeSection />
       <ContactSection />
     </main>
